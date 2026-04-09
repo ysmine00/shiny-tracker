@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #F8F4F0;
+    color: #1A1A1A;
+    font-family: 'DM Sans', sans-serif;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #E8E0DB;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D9CFC9;
+    border-radius: 3px;
+  }
+}
+
+@layer components {
+  .shimmer-gold {
+    background: linear-gradient(
+      105deg,
+      transparent 30%,
+      rgba(227, 53, 13, 0.12) 50%,
+      transparent 70%
+    );
+    background-size: 200% auto;
+    animation: shimmer 2.5s linear infinite;
+  }
+
+  .card-glow:hover {
+    box-shadow: 0 0 0 1px rgba(227,53,13,0.15), 0 4px 32px rgba(227,53,13,0.08);
+  }
+
+  .type-badge {
+    @apply text-xs font-mono font-medium px-2 py-0.5 rounded-full uppercase tracking-wide;
+  }
+
+  .btn-primary {
+    @apply bg-poke-red text-white font-display font-semibold px-5 py-2.5 rounded-xl
+           hover:bg-poke-redlight transition-all duration-200 active:scale-95 text-sm;
+  }
+
+  .btn-ghost {
+    @apply border border-poke-border text-poke-black px-5 py-2.5 rounded-xl
+           hover:border-poke-gray hover:bg-white transition-all duration-200 active:scale-95 text-sm font-body;
+  }
+
+  .input-field {
+    @apply w-full bg-white border border-poke-border rounded-xl px-4 py-2.5 text-poke-black
+           text-sm placeholder-poke-gray focus:outline-none focus:border-poke-gray
+           transition-colors duration-200 font-body;
+  }
+
+  .select-field {
+    @apply w-full bg-white border border-poke-border rounded-xl px-4 py-2.5 text-poke-black
+           text-sm focus:outline-none focus:border-poke-gray transition-colors duration-200
+           font-body appearance-none cursor-pointer;
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
