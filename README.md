@@ -2,7 +2,7 @@
 
 > Track every shiny Pokémon hunt. Calculate your luck. Built as a full-stack portfolio project.
 
-A web app for logging shiny Pokémon hunts across all mainline games — with real-time data sync, accurate cumulative probability math, hunt history charts, and per-trainer collections backed by Supabase.
+A web app for logging shiny Pokémon hunts across all mainline games: with real-time data sync, accurate cumulative probability math, hunt history charts, and per-trainer collections backed by Supabase.
 
 ---
 
